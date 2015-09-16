@@ -6,7 +6,7 @@ source ~/torch/activate
 
 luarocks make rocks/clnn-scm-1.rockspec || exit 1
 
-if [[ ! -v LUAEXE ]]; then {
+if [[ -z $LUAEXE ]]; then {
     LUAEXE=luajit
     # LUAEXE=lua
 } fi
